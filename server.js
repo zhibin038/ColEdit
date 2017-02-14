@@ -8,15 +8,9 @@ var http = require('http').Server(app);
 
 app.set('view engine', 'ejs');
 
-app.locals.resoucePath = "/";
-
-/*
-app.get('/', function(req, res){
-  res.sendfile('views/index.html');
-});
-*/
 
 app.set("port", process.env.PORT || 3000);
+
 app.get("/", function(req, res) {
   res.send("Hello world!");
 });
